@@ -1,0 +1,171 @@
+object Frame1: TFrame1
+  Left = 0
+  Height = 864
+  Top = 0
+  Width = 1595
+  ClientHeight = 864
+  ClientWidth = 1595
+  Color = clBlack
+  Font.CharSet = ANSI_CHARSET
+  Font.Height = -21
+  Font.Name = 'Courier New'
+  Font.Pitch = fpFixed
+  Font.Quality = fqDraft
+  Font.Style = [fsBold]
+  ParentBackground = False
+  ParentColor = False
+  ParentFont = False
+  TabOrder = 0
+  Visible = False
+  DesignLeft = -7
+  DesignTop = 5
+  object Button1: TButton
+    Left = 272
+    Height = 65
+    Top = 452
+    Width = 416
+    Caption = 'Start File anlegen'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -37
+    Font.Name = 'Black Ops One'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object Label1: TLabel
+    Left = 72
+    Height = 32
+    Top = 200
+    Width = 841
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Anlegen Projekt-Index-File'
+    Color = clAqua
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clFuchsia
+    Font.Height = -27
+    Font.Name = 'Courier New'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object Label3: TLabel
+    Left = 232
+    Height = 32
+    Top = 324
+    Width = 402
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Anzahl Projekte (10-999999):'
+    Color = clNavy
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clYellow
+    Font.Height = -21
+    Font.Name = 'Courier New'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object Edit1: TEdit
+    Left = 632
+    Height = 32
+    Top = 324
+    Width = 94
+    AutoSize = False
+    Color = clYellow
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlue
+    Font.Height = -21
+    Font.Name = 'Courier New'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 1
+    OnKeyPress = Edit1KeyPress
+    OnKeyUp = Edit1KeyUp
+  end
+  object Label2: TLabel
+    Left = 0
+    Height = 32
+    Top = 824
+    Width = 1595
+    AutoSize = False
+    Color = clInfoBk
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clRed
+    Font.Height = -27
+    Font.Name = 'Courier New'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object Label4: TLabel
+    Left = 0
+    Height = 32
+    Top = 0
+    Width = 1595
+    Alignment = taCenter
+    AutoSize = False
+    Color = clInfoBk
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clGreen
+    Font.Height = -27
+    Font.Name = 'Gill Sans Ultra Bold'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object Label5: TLabel
+    Left = 0
+    Height = 30
+    Top = 32
+    Width = 1595
+    AutoSize = False
+    Caption = '=================================================================================================================='
+    Color = clInfoBk
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clPurple
+    Font.Height = -21
+    Font.Name = 'Bowlby One SC'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object Label6: TLabel
+    Left = 0
+    Height = 30
+    Top = 794
+    Width = 1595
+    AutoSize = False
+    Caption = '=================================================================================================================='
+    Color = clInfoBk
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clPurple
+    Font.Height = -21
+    Font.Name = 'Bowlby One SC'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+end
