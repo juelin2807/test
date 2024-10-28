@@ -1898,6 +1898,13 @@ begin
   self.StringGrid1.Cells[14, 1]:='';
   self.StringGrid1.Cells[15, 1]:='';
   self.StringGrid1.Cells[16, 1]:='';
+  self.Button2.Visible:=False;
+  self.Button3.Visible:=False;
+  if Personzaehl > 0 then
+  begin
+    self.Button2.Visible:=True;
+    self.Button3.Visible:=True;
+  end;
 end;
 
 procedure TFrame2.FBLoe;
