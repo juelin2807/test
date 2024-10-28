@@ -533,7 +533,8 @@ object Form1: TForm1
     Visible = False
   end
   inline Frame2: TFrame2
-    Top = -2
+    Left = 8
+    Top = -96
     TabOrder = 4
     Visible = False
     inherited Label5: TLabel

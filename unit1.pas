@@ -344,13 +344,15 @@ begin
   Printers.Printer.Canvas.TextOut(px, py, '    Personentabelle für Projejte                                                                                          Seite: '+h4+'          Datum: '+DateToStr(now));
   py:=py+vpy;
   zeile:=zeile+1;
-  Printers.Printer.Canvas.TextOut(px, py, 'Nummer Personenart Vorname                   Nachname                  Strasse                        Hausnummer Firmenname');
+  Printers.Printer.Canvas.TextOut(px, py, 'Nummer Personenart Vorname                   Nachname                  Strasse                         Hausnummer Firmenname');
   py:=py+vpy;
   zeile:=zeile+1;
   Printers.Printer.Canvas.TextOut(px, py, 'PLZ        Ort                            Telefon              Handy                EMail                          Land');
   py:=py+vpy;
   zeile:=zeile+1;
   Printers.Printer.Canvas.TextOut(px, py, 'Partner: Anrede Vorname                   Nachname                  Telefon');
+  //                                                1234   123456789.123456789.12345 123456789.123456789.12345 12345
+  //                                                    123
   py:=py+vpy;
   zeile:=zeile+1;
   Printers.Printer.Canvas.TextOut(px, py, '====================================================================================================================================================================');
@@ -1122,205 +1124,202 @@ begin
                       if h4 > 0 then
                       begin
                         hc:=Length(h6);
-                        if hc > 0 then
+                        if h8 = 16 then
                         begin
-                          if h8 = 16 then
+                          if h4 < h2 then
                           begin
-                            if h4 < h2 then
-                            begin
-                              ialpha:=Blankweg(3, h6);
-                              Persontab[hb].Partnernachname:=ialpha;
-                              h8:=17;
-                              h6:='';
-                              h4:=0;
-                            end;
+                            ialpha:=Blankweg(3, h6);
+                            Persontab[hb].Partnernachname:=ialpha;
+                            h8:=17;
+                            h6:='';
+                            h4:=0;
                           end;
-                          if h8 = 15 then
+                        end;
+                        if h8 = 15 then
+                        begin
+                          if h4 < h2 then
                           begin
-                            if h4 < h2 then
-                            begin
-                              ialpha:=Blankweg(3, h6);
-                              Persontab[hb].Partnervorname:=ialpha;
-                              h8:=16;
-                              h6:='';
-                              h4:=0;
-                            end;
+                            ialpha:=Blankweg(3, h6);
+                            Persontab[hb].Partnervorname:=ialpha;
+                            h8:=16;
+                            h6:='';
+                            h4:=0;
                           end;
-                          if h8 = 14 then
+                        end;
+                        if h8 = 14 then
+                        begin
+                          if h4 < h2 then
                           begin
-                            if h4 < h2 then
-                            begin
-                              ialpha:=Blankweg(3, h6);
-                              Persontab[hb].Partnertelefon:=ialpha;
-                              h8:=15;
-                              h6:='';
-                              h4:=0;
-                            end;
+                            ialpha:=Blankweg(3, h6);
+                            Persontab[hb].Partnertelefon:=ialpha;
+                            h8:=15;
+                            h6:='';
+                            h4:=0;
                           end;
-                          if h8 = 13 then
+                        end;
+                        if h8 = 13 then
+                        begin
+                          if h4 < h2 then
                           begin
-                            if h4 < h2 then
-                            begin
-                              ialpha:=Blankweg(3, h6);
-                              Persontab[hb].Partneranrede:=ialpha;
-                              h8:=14;
-                              h6:='';
-                              h4:=0;
-                            end;
+                            ialpha:=Blankweg(3, h6);
+                            Persontab[hb].Partneranrede:=ialpha;
+                            h8:=14;
+                            h6:='';
+                            h4:=0;
                           end;
-                          if h8 = 12 then
+                        end;
+                        if h8 = 12 then
+                        begin
+                          if h4 < h2 then
                           begin
-                            if h4 < h2 then
-                            begin
-                              ialpha:=Blankweg(3, h6);
-                              Persontab[hb].Firmenname:=ialpha;
-                              h8:=13;
-                              h6:='';
-                              h4:=0;
-                            end;
+                            ialpha:=Blankweg(3, h6);
+                            Persontab[hb].Firmenname:=ialpha;
+                            h8:=13;
+                            h6:='';
+                            h4:=0;
                           end;
-                          if h8 = 11 then
+                        end;
+                        if h8 = 11 then
+                        begin
+                          if h4 < h2 then
                           begin
-                            if h4 < h2 then
-                            begin
-                              ialpha:=Blankweg(3, h6);
-                              Persontab[hb].Land:=ialpha;
-                              h8:=12;
-                              h6:='';
-                              h4:=0;
-                            end;
+                            ialpha:=Blankweg(3, h6);
+                            Persontab[hb].Land:=ialpha;
+                            h8:=12;
+                            h6:='';
+                            h4:=0;
                           end;
-                          if h8 = 10 then
+                        end;
+                        if h8 = 10 then
+                        begin
+                          if h4 < h2 then
                           begin
-                            if h4 < h2 then
-                            begin
-                              ialpha:=Blankweg(3, h6);
-                              Persontab[hb].Email:=ialpha;
-                              h8:=11;
-                              h6:='';
-                              h4:=0;
-                            end;
+                            ialpha:=Blankweg(3, h6);
+                            Persontab[hb].Email:=ialpha;
+                            h8:=11;
+                            h6:='';
+                            h4:=0;
                           end;
-                          if h8 = 9 then
+                        end;
+                        if h8 = 9 then
+                        begin
+                          if h4 < h2 then
                           begin
-                            if h4 < h2 then
-                            begin
-                              ialpha:=Blankweg(3, h6);
-                              Persontab[hb].Handy:=ialpha;
-                              h8:=10;
-                              h6:='';
-                              h4:=0;
-                            end;
+                            ialpha:=Blankweg(3, h6);
+                            Persontab[hb].Handy:=ialpha;
+                            h8:=10;
+                            h6:='';
+                            h4:=0;
                           end;
-                          if h8 = 8 then
+                        end;
+                        if h8 = 8 then
+                        begin
+                          if h4 < h2 then
                           begin
-                            if h4 < h2 then
-                            begin
-                              ialpha:=Blankweg(3, h6);
-                              Persontab[hb].Telefon:=ialpha;
-                              h8:=9;
-                              h6:='';
-                              h4:=0;
-                            end;
+                            ialpha:=Blankweg(3, h6);
+                            Persontab[hb].Telefon:=ialpha;
+                            h8:=9;
+                            h6:='';
+                            h4:=0;
                           end;
-                          if h8 = 7 then
+                        end;
+                        if h8 = 7 then
+                        begin
+                          if h4 < h2 then
                           begin
-                            if h4 < h2 then
-                            begin
-                              ialpha:=Blankweg(3, h6);
-                              Persontab[hb].Ort:=ialpha;
-                              h8:=8;
-                              h6:='';
-                              h4:=0;
-                            end;
+                            ialpha:=Blankweg(3, h6);
+                            Persontab[hb].Ort:=ialpha;
+                            h8:=8;
+                            h6:='';
+                            h4:=0;
                           end;
-                          if h8 = 6 then
+                        end;
+                        if h8 = 6 then
+                        begin
+                          if h4 < h2 then
                           begin
-                            if h4 < h2 then
-                            begin
-                              ialpha:=Blankweg(3, h6);
-                              Persontab[hb].Plz:=ialpha;
-                              h8:=7;
-                              h6:='';
-                              h4:=0;
-                            end;
+                            ialpha:=Blankweg(3, h6);
+                            Persontab[hb].Plz:=ialpha;
+                            h8:=7;
+                            h6:='';
+                            h4:=0;
                           end;
-                          if h8 = 5 then
+                        end;
+                        if h8 = 5 then
+                        begin
+                          if h4 < h2 then
                           begin
-                            if h4 < h2 then
-                            begin
-                              ialpha:=Blankweg(3, h6);
-                              Persontab[hb].Hausnummer:=ialpha;
-                              h8:=6;
-                              h6:='';
-                              h4:=0;
-                            end;
+                            ialpha:=Blankweg(3, h6);
+                            Persontab[hb].Hausnummer:=ialpha;
+                            h8:=6;
+                            h6:='';
+                            h4:=0;
                           end;
-                          if h8 = 4 then
+                        end;
+                        if h8 = 4 then
+                        begin
+                          if h4 < h2 then
                           begin
-                            if h4 < h2 then
-                            begin
-                              ialpha:=Blankweg(3, h6);
-                              Persontab[hb].Strasse:=ialpha;
-                              h8:=5;
-                              h6:='';
-                              h4:=0;
-                            end;
+                            ialpha:=Blankweg(3, h6);
+                            Persontab[hb].Strasse:=ialpha;
+                            h8:=5;
+                            h6:='';
+                            h4:=0;
                           end;
-                          if h8 = 3 then
+                        end;
+                        if h8 = 3 then
+                        begin
+                          if h4 < h2 then
                           begin
-                            if h4 < h2 then
-                            begin
-                              ialpha:=Blankweg(3, h6);
-                              Persontab[hb].Nachname:=ialpha;
-                              h8:=4;
-                              h6:='';
-                              h4:=0;
-                            end;
+                            ialpha:=Blankweg(3, h6);
+                            Persontab[hb].Nachname:=ialpha;
+                            h8:=4;
+                            h6:='';
+                            h4:=0;
                           end;
-                          if h8 = 2 then
+                        end;
+                        if h8 = 2 then
+                        begin
+                          if h4 < h2 then
                           begin
-                            if h4 < h2 then
-                            begin
-                              ialpha:=Blankweg(3, h6);
-                              Persontab[hb].Vorname:=ialpha;
-                              h8:=3;
-                              h6:='';
-                              h4:=0;
-                            end;
+                            ialpha:=Blankweg(3, h6);
+                            Persontab[hb].Vorname:=ialpha;
+                            h8:=3;
+                            h6:='';
+                            h4:=0;
                           end;
-                          if h8 = 1 then
+                        end;
+                        if h8 = 1 then
+                        begin
+                          if h4 < h2 then
                           begin
-                            if h4 < h2 then
-                            begin
-                              ialpha:=Blankweg(3, h6);
-                              Persontab[hb].Art:=ialpha;
-                              h8:=2;
-                              h6:='';
-                              h4:=0;
-                            end;
+                            ialpha:=Blankweg(3, h6);
+                            Persontab[hb].Art:=ialpha;
+                            h8:=2;
+                            h6:='';
+                            h4:=0;
                           end;
-                          if h8 = 0 then
+                        end;
+                        if h8 = 0 then
+                        begin
+                          if h4 < h2 then
                           begin
-                            if h4 < h2 then
-                            begin
-                              ialpha:=Blankweg(3, h6);
-                              try
-                                h8:=StrToInt(ialpha);
-                              except
-                                h8:=0;
-                              end;
-                              if ((h8 > 0) and (h8 <= Personmax)) then
-                              begin
-                                Persontab[h8].Nummer:=h8;
-                                Persontab[h8].Satzart:=True;
-                                personzaehl:=personzaehl+1;
-                                hb:=h8;
-                              end;
-                              h8:=1;
-                              h6:='';
-                              h4:=0;
+                            ialpha:=Blankweg(3, h6);
+                            try
+                              h8:=StrToInt(ialpha);
+                            except
+                              h8:=0;
                             end;
+                            if ((h8 > 0) and (h8 <= Personmax)) then
+                            begin
+                              Persontab[h8].Nummer:=h8;
+                              Persontab[h8].Satzart:=True;
+                              personzaehl:=personzaehl+1;
+                              hb:=h8;
+                            end;
+                            h8:=1;
+                            h6:='';
+                            h4:=0;
                           end;
                         end;
                       end;
@@ -1421,6 +1420,8 @@ procedure TForm1.MenuItem9Click(Sender: TObject);
   var h7: string;
   var h8: string;
   var h9: string;
+  var ha: string;
+  var hb: string;
 begin
   Label1.Caption:=UTF8Encode(#169)+'LINSOFT               Projektverwaltung                   Datum: '+FormatDateTime('DD.MM.YYYY',now);
   Label2.Caption:='';
@@ -1463,13 +1464,17 @@ begin
             h5:=Blankdazu(2, 6, h2);
             h2:=Persontab[h3].Vorname;
             h6:=Blankdazu(2, 25, h2);
+            hb:=' ';
+            if Persontab[h3].Art = 'Person' then hb:=hb+' ';
             h2:=Persontab[h3].Nachname;
             h7:=Blankdazu(2, 25, h2);
             h2:=Persontab[h3].Strasse;
             h8:=Blankdazu(2, 30, h2);
             h2:=Persontab[h3].Hausnummer;
             h9:=Blankdazu(2, 5, h2);
-            Printers.Printer.Canvas.TextOut(px, py, '  '+h4+'    '+h5+'   '+h6+' '+h7+' '+h8+'      '+h9);
+            h2:=Persontab[h3].Firmenname;
+            ha:=Blankdazu(2, 30, h2);
+            Printers.Printer.Canvas.TextOut(px, py, '  '+h4+'    '+h5+'   '+h6+hb+h7+' '+h8+'  '+h9+'      '+ha);
             py:=py+vpy;
             zeile:=zeile+1;
             h2:=Persontab[h3].Plz;
@@ -1499,7 +1504,7 @@ begin
                 h6:=Blankdazu(2, 25, h2);
                 h2:=Persontab[h3].Partnertelefon;
                 h7:=Blankdazu(2, 20, h2);
-                Printers.Printer.Canvas.TextOut(px, py, '           Partner: '+h4+'   '+h5+' '+h6+' '+h7);
+                Printers.Printer.Canvas.TextOut(px, py, 'Partner: '+h4+'   '+h5+' '+h6+' '+h7);
                 py:=py+vpy;
                 zeile:=zeile+1;
               end;
